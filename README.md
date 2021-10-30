@@ -18,7 +18,6 @@ roles:
 
  - `cloudwatch_region` Cloudwatch region to send the logs to.
  - `cloudwatch_log_group` Cloudwatch log group to send the logs to.
- - `gallery_api_endpoint` API endpoint for connecting the client to the server API.
  - `consumer_key`: Your Twitter account consumer key.
  - `consumer_secret`: Your Twitter account consumer secret.
  - `access_token_key`: Your Twitter account access token key.
