@@ -1,0 +1,32 @@
+---
+- name: Create the movie directory
+  file:
+    path: "{{ hostvars[inventory_hostname].working_directory }}/movies"
+    state: directory
+
+- name: Create app container
+  docker_container:
+    name: "{{ application_name }}"
+    image: "namelivia/{{application_name}}:0.0.19"
+    restart_policy: "always"
+    memory: "200MB"
+    log_driver: "awslogs"
+    log_options:
+        awslogs-region: "{{cloudwatch_region}}"
+        awslogs-group: "{{cloudwatch_log_group}}"
+        awslogs-stream: "{{application_name}}"
+    volumes:
+        - "{{ hostvars[inventory_hostname].working_directory }}movies:/movies"
+    env:
+      CONSUMER_KEY: "{{ consumer_key }}"
+      CONSUMER_SECRET: "{{ consumer_secret }}"
+      ACCESS_TOKEN_KEY: "{{ access_token_key }}"
+      ACCESS_TOKEN_SECRET: "{{ access_token_secret }}"
+      SUBS_URI: "{{ subs_uri }}"
+      SUBS_ENCODING: "{{ subs_encoding }}"
+      VIDEO_URI: "{{ video_uri }}"
+      OUTPUT_URI: "{{ output_uri }}"
+      TEXT_COLOR: "{{ text_color }}"
+      TEXT_SIZE: "{{ text_size }}"
+      TEXT_FONT: "{{ text_font }}"
+      IDLE_PERIOD: "{{ idle_period }}"
