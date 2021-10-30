@@ -1,4 +1,4 @@
-# Gallery client Ansible role
+# Movie Quote Twitter Bot Ansible role
 
 ## This is a WIP
 
