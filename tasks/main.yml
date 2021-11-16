@@ -27,14 +27,14 @@
 - name: Create app container
   docker_container:
     name: "{{ application_name }}"
-    image: "namelivia/{{application_name}}:0.0.19"
+    image: "namelivia/{{ application_name }}:0.0.19"
     restart_policy: "always"
     memory: "200MB"
     log_driver: "awslogs"
     log_options:
-        awslogs-region: "{{cloudwatch_region}}"
-        awslogs-group: "{{cloudwatch_log_group}}"
-        awslogs-stream: "{{application_name}}"
+      awslogs-region: "{{ cloudwatch_region }}"
+      awslogs-group: "{{ cloudwatch_log_group }}"
+      awslogs-stream: "{{ application_name }}"
     volumes:
         - "{{ hostvars[inventory_hostname].working_directory }}movies:/movies"
     env:
