@@ -11,7 +11,7 @@ collections:
   - community.docker
 
 roles:
-  - src: https://github.com/namelivia/namelivia.movie-quote-twitter-bot
+  - src: https://github.com/namelivia/ansible-movie-quote-twitter-bot
 ```
 
 ## Required variables
