@@ -23,6 +23,7 @@
   file:
     path: "{{ hostvars[inventory_hostname].working_directory }}/movies"
     state: directory
+    mode: 0700
 
 - name: Create app container
   docker_container:
