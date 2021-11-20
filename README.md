@@ -1,4 +1,4 @@
-# Movie Quote Twitter Bot Ansible role
+# Movie Quote Twitter Bot Ansible role [![Ansible Lint](https://github.com/namelivia/ansible-movie-quote-twitter-bot/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/namelivia/ansible-movie-quote-twitter-bot/actions/workflows/ansible-lint.yml)
 
 ## This is a WIP
 
