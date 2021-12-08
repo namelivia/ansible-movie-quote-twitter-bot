@@ -29,6 +29,7 @@
   docker_container:
     name: "{{ application_name }}"
     image: "namelivia/{{ application_name }}:latest"
+    pull: true
     restart_policy: "always"
     memory: "200MB"
     log_driver: "awslogs"
