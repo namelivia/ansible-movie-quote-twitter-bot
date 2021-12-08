@@ -28,7 +28,7 @@
 - name: Create app container
   docker_container:
     name: "{{ application_name }}"
-    image: "namelivia/{{ application_name }}:0.0.19"
+    image: "namelivia/{{ application_name }}:0.0.21"
     restart_policy: "always"
     memory: "200MB"
     log_driver: "awslogs"
@@ -51,3 +51,4 @@
       TEXT_SIZE: "{{ text_size }}"
       TEXT_FONT: "{{ text_font }}"
       IDLE_PERIOD: "{{ idle_period }}"
+      SENTRY_URL: "{{ sentry_url }}"

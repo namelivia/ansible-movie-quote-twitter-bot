@@ -1,7 +1,5 @@
 # Movie Quote Twitter Bot Ansible role [![Ansible Lint](https://github.com/namelivia/ansible-movie-quote-twitter-bot/actions/workflows/ansible-lint.yml/badge.svg)](https://github.com/namelivia/ansible-movie-quote-twitter-bot/actions/workflows/ansible-lint.yml)
 
-## This is a WIP
-
 The project depends on the collection `community.docker` but apparently this [cannot be listed as a dependency](https://github.com/ansible/ansible/issues/62847) so make sure you add it to your `requirements.yml` file like:
 
 ```yml
@@ -30,6 +28,7 @@ roles:
  - `text_size`: Font size for the text that will be displayed e.g. `18`
  - `text_font`: Font for the text that will be displayed e.g. `FreeSans-Negrita`
  - `idle_period`: The number of seconds the script will wait before executing. e.g. `900`
+ - `sentry_url`: If set errors will be sent to [Sentry](https://sentry.io)
 
  ## Uploading a movie and subtitles file
  
