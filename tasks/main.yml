@@ -28,7 +28,7 @@
 - name: Create app container
   docker_container:
     name: "{{ application_name }}"
-    image: "namelivia/{{ application_name }}:0.0.21"
+    image: "namelivia/{{ application_name }}:latest"
     restart_policy: "always"
     memory: "200MB"
     log_driver: "awslogs"
