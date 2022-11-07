@@ -6,10 +6,15 @@
       - application_name is defined
       - cloudwatch_region is defined
       - cloudwatch_log_group is defined
-      - consumer_key is defined
-      - consumer_secret is defined
-      - access_token_key is defined
-      - access_token_secret is defined
+      - twitter_consumer_key is defined
+      - twitter_consumer_secret is defined
+      - twitter_access_token_key is defined
+      - twitter_access_token_secret is defined
+      - mastodon_client_id is defined
+      - mastodon_client_secret is defined
+      - mastodon_api_base_url is defined
+      - mastodon_login is defined
+      - mastodon_password is defined
       - subs_uri is defined
       - subs_encoding is defined
       - video_uri is defined
@@ -41,10 +46,15 @@
     volumes:
       - "{{ hostvars[inventory_hostname].working_directory }}movies:/movies"
     env:
-      CONSUMER_KEY: "{{ consumer_key }}"
-      CONSUMER_SECRET: "{{ consumer_secret }}"
-      ACCESS_TOKEN_KEY: "{{ access_token_key }}"
-      ACCESS_TOKEN_SECRET: "{{ access_token_secret }}"
+      TWITTER_CONSUMER_KEY: "{{ twitter_consumer_key }}"
+      TWITTER_CONSUMER_SECRET: "{{ twitter_consumer_secret }}"
+      TWITTER_ACCESS_TOKEN_KEY: "{{ twitter_access_token_key }}"
+      TWITTER_ACCESS_TOKEN_SECRET: "{{ twitter_access_token_secret }}"
+      MASTODON_CLIENT_ID: "{{ mastodon_client_id }}"
+      MASTODON_CLIENT_SECRET: "{{ mastodon_client_secret }}"
+      MASTODON_API_BASE_URL: "{{ mastodon_api_base_url }}"
+      MASTODON_LOGIN: "{{ mastodon_login }}"
+      MASTODON_PASSWORD: "{{ mastodon_password }}"
       SUBS_URI: "{{ subs_uri }}"
       SUBS_ENCODING: "{{ subs_encoding }}"
       VIDEO_URI: "{{ video_uri }}"
