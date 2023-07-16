@@ -14,8 +14,7 @@ roles:
 
 ## Required variables
 
- - `cloudwatch_region` Cloudwatch region to send the logs to.
- - `cloudwatch_log_group` Cloudwatch log group to send the logs to.
+ - `loki_url` Loki endpoint to send logs.
  - `consumer_key`: Your Twitter account consumer key.
  - `consumer_secret`: Your Twitter account consumer secret.
  - `access_token_key`: Your Twitter account access token key.
